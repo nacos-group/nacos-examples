@@ -12,7 +12,7 @@
     <artifactId>nacos-spring-boot-discovery-example</artifactId>
 
     <properties>
-        <nacos-discovery-spring-boot.version>0.2.0-SNAPSHOT</nacos-discovery-spring-boot.version>
+        <nacos-discovery-spring-boot.version>0.2.0-RC1</nacos-discovery-spring-boot.version>
     </properties>
 
     <dependencies>
