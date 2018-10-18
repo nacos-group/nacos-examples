@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>nacos-examples</artifactId>
+        <groupId>com.alibaba.nacos</groupId>
+        <version>0.2.0-SNAPSHOT</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>nacos-sentinel-example</artifactId>
+    <packaging>jar</packaging>
+
+    <name>nacos-sentinel-example</name>
+
+    <properties>
+        <maven.compiler.version>3.8.0</maven.compiler.version>
+        <java.source.version>1.8</java.source.version>
+        <java.target.version>1.8</java.target.version>
+    </properties>
+    
+    <url>http://nacos.io</url>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-core</artifactId>
+            <version>0.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-datasource-extension</artifactId>
+            <version>0.2.0</version>
+        </dependency>
+        <dependency>
+		  <groupId>com.alibaba.nacos</groupId>
+		  <artifactId>nacos-client</artifactId>
+		  <version>0.2.1</version>
+		</dependency>
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-datasource-nacos</artifactId>
+            <version>0.2.0</version>
+        </dependency>
+        <dependency>
+		    <groupId>com.alibaba.csp</groupId>
+		    <artifactId>sentinel-transport-simple-http</artifactId>
+		    <version>0.2.0</version>
+		</dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.51_preview_11</version>
+        </dependency>
+    </dependencies>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.version}</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>${java.encoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    
+</project>
