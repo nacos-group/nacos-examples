@@ -25,30 +25,29 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
 
 /**
- * This demo demonstrates how to use Nacos as the data source of Sentinel rules.
+ * This demo demonstrates how to use Nacos dynamic push Sentinel rules.
  *
  * Before you start, you need to start a Nacos server in local first, and then
  * use {@link NacosConfigSender} to publish initial rule configuration to Nacos.
  *
- * @author Eric Zhao
+ * @author Nacos
  */
-public class NacosDataSourceDemo {
+public class NacosDynamicFlowDemo {
 
     private static final String KEY = "TestResource";
 
     public static void main(String[] args) {
-    	final String remoteAddress = "47.74.227.13";
+    	final String remoteAddress = "localhost";
+//    	final String remoteAddress = "47.74.227.13";
         final String groupId = "DEFAULT_GROUP";
-        final String dataId = "com.alibaba.csp.sentinel.demo.flow.rule";
-        
+        final String dataId = "com.alibaba.nacos.demo.flow.rule";
         ReadableDataSource<String, List<FlowRule>> flowRuleDataSource = new NacosDataSource<>(remoteAddress, groupId, dataId,
             source -> JSON.parseObject(source, new TypeReference<List<FlowRule>>() {}));
         FlowRuleManager.register2Property(flowRuleDataSource.getProperty());
         
         // Assume we config: resource is `TestResource`, initial QPS threshold is 5.
-        FlowQpsRunner runner = new FlowQpsRunner(KEY, 1, 1000);
+        FlowQpsRunner runner = new FlowQpsRunner(KEY, 1, 10000);
         runner.simulateTraffic();
         runner.tick();
     }
-
 }
