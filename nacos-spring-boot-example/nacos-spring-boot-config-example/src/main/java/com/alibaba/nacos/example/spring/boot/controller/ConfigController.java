@@ -11,16 +11,16 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 @RequestMapping("config")
 public class ConfigController {
 
-    @Value("${useLocalCache:false}")
-    private boolean useLocalCache;
+    @Value("${connectTimeoutInMills:5000}")
+    private int connectTimeoutInMills;
 
-    public void setUseLocalCache(boolean useLocalCache) {
-        this.useLocalCache = useLocalCache;
+    public void setConnectTimeoutInMills(int connectTimeoutInMills) {
+        this.connectTimeoutInMills = connectTimeoutInMills;
     }
 
     @RequestMapping(value = "/get", method = GET)
     @ResponseBody
-    public boolean get() {
-        return useLocalCache;
+    public int get() {
+        return connectTimeoutInMills;
     }
 }
