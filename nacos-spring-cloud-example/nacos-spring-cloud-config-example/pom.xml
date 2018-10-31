@@ -21,7 +21,7 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-            <version>0.2.0.BUILD-SNAPSHOT</version>
+            <version>0.2.0.RELEASE</version>
         </dependency>
 
     </dependencies>

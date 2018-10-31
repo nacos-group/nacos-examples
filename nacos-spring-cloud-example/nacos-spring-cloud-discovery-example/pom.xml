@@ -18,16 +18,12 @@
         <module>nacos-spring-cloud-consumer-example</module>
     </modules>
 
-    <properties>
-        <spring-cloud-alibaba-nacos-discovery.version>0.2.0.BUILD-SNAPSHOT</spring-cloud-alibaba-nacos-discovery.version>
-    </properties>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-                <version>${spring-cloud-alibaba-nacos-discovery.version}</version>
+                <version>0.2.0.RELEASE</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
