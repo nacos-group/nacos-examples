@@ -12,5 +12,6 @@
         <module>nacos-spring-example</module>
         <module>nacos-spring-boot-example</module>
         <module>nacos-spring-cloud-example</module>
+        <module>nacos-sentinel-example</module>
     </modules>
 </project>
