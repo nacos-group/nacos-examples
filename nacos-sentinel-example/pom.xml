@@ -27,27 +27,22 @@
         <dependency>
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-core</artifactId>
-            <version>0.2.0</version>
+            <version>1.3.0-GA</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-datasource-extension</artifactId>
-            <version>0.2.0</version>
+            <version>1.3.0-GA</version>
         </dependency>
-        <dependency>
-		  <groupId>com.alibaba.nacos</groupId>
-		  <artifactId>nacos-client</artifactId>
-		  <version>0.2.1</version>
-		</dependency>
         <dependency>
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-datasource-nacos</artifactId>
-            <version>0.2.0</version>
+            <version>1.3.0-GA</version>
         </dependency>
         <dependency>
 		    <groupId>com.alibaba.csp</groupId>
 		    <artifactId>sentinel-transport-simple-http</artifactId>
-		    <version>0.2.0</version>
+		    <version>1.3.0-GA</version>
 		</dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
