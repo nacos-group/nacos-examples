@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>nacos-spring-boot-config-example</module>
+        <module>nacos-spring-boot-config-mysql-example</module>
         <module>nacos-spring-boot-discovery-example</module>
     </modules>
 
