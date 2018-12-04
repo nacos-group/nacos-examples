@@ -13,5 +13,6 @@
         <module>nacos-spring-boot-example</module>
         <module>nacos-spring-cloud-example</module>
         <module>nacos-sentinel-example</module>
+        <module>nacos-cmdb-plugin-example</module>
     </modules>
 </project>
