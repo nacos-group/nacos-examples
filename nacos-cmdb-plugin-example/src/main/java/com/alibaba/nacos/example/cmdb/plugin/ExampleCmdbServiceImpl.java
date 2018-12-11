@@ -15,7 +15,7 @@
  */
 package com.alibaba.nacos.example.cmdb.plugin;
 
-import com.alibaba.nacos.api.cmdb.CmdbService;
+import com.alibaba.nacos.api.cmdb.spi.CmdbService;
 import com.alibaba.nacos.api.cmdb.pojo.Entity;
 import com.alibaba.nacos.api.cmdb.pojo.EntityEvent;
 import com.alibaba.nacos.api.cmdb.pojo.EntityEventType;
@@ -213,12 +213,12 @@ public class ExampleCmdbServiceImpl implements CmdbService {
     }
 
     @Override
-    public Map<String, Map<String, Entity>> dumpAllEntities() {
+    public Map<String, Map<String, Entity>> getAllEntities() {
         return entityMap;
     }
 
     @Override
-    public List<EntityEvent> getLabelEvents(long timestamp) {
+    public List<EntityEvent> getEntityEvents(long timestamp) {
 
         Entity entity = new Entity();
         entity.setName("1.1.1.1");
