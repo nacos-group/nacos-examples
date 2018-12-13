@@ -1,6 +1,6 @@
 package com.alibaba.nacos.example.spring.boot.controller;
 
-import org.springframework.beans.factory.annotation.Value;
+import com.alibaba.nacos.api.config.annotation.NacosValue;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -11,12 +11,8 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 @RequestMapping("config")
 public class ConfigController {
 
-    @Value("${connectTimeoutInMills:5000}")
+    @NacosValue(value = "${connectTimeoutInMills:5000}", autoRefreshed = true)
     private int connectTimeoutInMills;
-
-    public void setConnectTimeoutInMills(int connectTimeoutInMills) {
-        this.connectTimeoutInMills = connectTimeoutInMills;
-    }
 
     @RequestMapping(value = "/get", method = GET)
     @ResponseBody
