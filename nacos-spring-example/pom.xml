@@ -15,6 +15,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>nacos-spring-config-example</module>
+        <module>nacos-spring-config-mysql-example</module>
         <module>nacos-spring-discovery-example</module>
     </modules>
 

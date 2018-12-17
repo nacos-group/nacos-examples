@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:nacos="http://nacos.io/schema/nacos"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://nacos.io/schema/nacos
+       http://nacos.io/schema/nacos.xsd">
+
+    <nacos:annotation-driven/>
+
+    <nacos:global-properties endpoint="acm.aliyun.com" namespace="41fc2929-f4f2-4c4f-9bde-8d0d48cab415" access-key="efc53bf102b546158c808e701363ba86" secret-key="z1z0oWlvG4V6cwRKOQ6ptD2Lm5U=" />
+
+    <nacos:property-source data-id="datasource.properties"/>
+</beans>
