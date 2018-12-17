@@ -38,34 +38,45 @@ public class ExampleCmdbServiceImpl implements CmdbService {
     public ExampleCmdbServiceImpl() {
 
         Label label = new Label();
-        label.setName("labelA");
+        label.setName("label1");
 
         Set<String> values = new HashSet<>();
-        values.add("a1");
-        values.add("a2");
-        values.add("a3");
+        values.add("x11");
+        values.add("x12");
+        values.add("x13");
         label.setValues(values);
 
         labelMap.put(label.getName(), label);
 
         label = new Label();
-        label.setName("labelB");
+        label.setName("label2");
 
         values = new HashSet<>();
-        values.add("b1");
-        values.add("b2");
-        values.add("b3");
+        values.add("x21");
+        values.add("x22");
+        values.add("x23");
         label.setValues(values);
 
         labelMap.put(label.getName(), label);
 
         label = new Label();
-        label.setName("labelC");
+        label.setName("label3");
 
         values = new HashSet<>();
-        values.add("c1");
-        values.add("c2");
-        values.add("c3");
+        values.add("x31");
+        values.add("x32");
+        values.add("x33");
+        label.setValues(values);
+
+        labelMap.put(label.getName(), label);
+
+        label = new Label();
+        label.setName("label4");
+
+        values = new HashSet<>();
+        values.add("x41");
+        values.add("x42");
+        values.add("x43");
         label.setValues(values);
 
         labelMap.put(label.getName(), label);
@@ -73,120 +84,111 @@ public class ExampleCmdbServiceImpl implements CmdbService {
         entityMap.put("ip", new HashMap<String, Entity>());
 
         Entity entity = new Entity();
-        entity.setName("1.1.1.1");
+        entity.setName("11.11.11.11");
         entity.setType("ip");
         Map<String, String> labels = new HashMap<>();
 
-        labels.put("labelA", "a1");
-        labels.put("labelB", "b1");
+        labels.put("label1", "x11");
+        labels.put("label2", "x21");
 
         entity.setLabels(labels);
 
-        entityMap.get("ip").put("1.1.1.1", entity);
+        entityMap.get("ip").put("11.11.11.11", entity);
 
         entity = new Entity();
-        entity.setName("2.2.2.2");
+        entity.setName("22.22.22.22");
         entity.setType("ip");
         labels = new HashMap<>();
 
-        labels.put("labelA", "a2");
-        labels.put("labelB", "b2");
+        labels.put("label1", "x12");
+        labels.put("label2", "x22");
 
         entity.setLabels(labels);
 
-        entityMap.get("ip").put("2.2.2.2", entity);
+        entityMap.get("ip").put("22.22.22.22", entity);
 
         entity = new Entity();
-        entity.setName("3.3.3.3");
+        entity.setName("33.33.33.33");
         entity.setType("ip");
         labels = new HashMap<>();
 
-        labels.put("labelA", "a3");
-        labels.put("labelB", "b3");
+        labels.put("label1", "x13");
+        labels.put("label2", "x23");
+        labels.put("label3", "x33");
+        labels.put("label4", "x43");
 
         entity.setLabels(labels);
 
-        entityMap.get("ip").put("3.3.3.3", entity);
+        entityMap.get("ip").put("33.33.33.33", entity);
 
         entity = new Entity();
-        entity.setName("4.4.4.4");
+        entity.setName("44.44.44.44");
         entity.setType("ip");
         labels = new HashMap<>();
 
-        labels.put("labelA", "a1");
-        labels.put("labelB", "b1");
+        labels.put("label4", "x41");
 
         entity.setLabels(labels);
 
-        entityMap.get("ip").put("4.4.4.4", entity);
+        entityMap.get("ip").put("44.44.44.44", entity);
+
 
         entity = new Entity();
-        entity.setName("5.5.5.5");
+        entity.setName("66.66.66.66");
         entity.setType("ip");
         labels = new HashMap<>();
 
-        labels.put("labelA", "a1");
-        labels.put("labelB", "b1");
+        labels.put("label4", "x41");
+        labels.put("label2", "x23");
 
         entity.setLabels(labels);
 
-        entityMap.get("ip").put("5.5.5.5", entity);
+        entityMap.get("ip").put("66.66.66.66", entity);
 
         entity = new Entity();
-        entity.setName("6.6.6.6");
+        entity.setName("77.77.77.77");
         entity.setType("ip");
         labels = new HashMap<>();
 
-        labels.put("labelA", "a2");
-        labels.put("labelB", "b2");
+        labels.put("label3", "x31");
+        labels.put("label4", "x43");
 
         entity.setLabels(labels);
 
-        entityMap.get("ip").put("6.6.6.6", entity);
+        entityMap.get("ip").put("77.77.77.77", entity);
 
-        entity = new Entity();
-        entity.setName("7.7.7.7");
-        entity.setType("ip");
-        labels = new HashMap<>();
-
-        labels.put("labelA", "a2");
-        labels.put("labelB", "b2");
-
-        entity.setLabels(labels);
-
-        entityMap.get("ip").put("7.7.7.7", entity);
-
-        entity = new Entity();
-        entity.setName("8.8.8.8");
-        entity.setType("ip");
-        labels = new HashMap<>();
-
-        labels.put("labelA", "a3");
-        labels.put("labelB", "b3");
-
-        entity.setLabels(labels);
-
-        entityMap.get("ip").put("8.8.8.8", entity);
-
-        entity = new Entity();
-        entity.setName("9.9.9.9");
-        entity.setType("ip");
-        labels = new HashMap<>();
-
-        labels.put("labelA", "a3");
-        labels.put("labelB", "b3");
-
-        entity.setLabels(labels);
-
-        entityMap.get("ip").put("9.9.9.9", entity);
+//        entity = new Entity();
+//        entity.setName("8.8.8.8");
+//        entity.setType("ip");
+//        labels = new HashMap<>();
+//
+//        labels.put("labelA", "a3");
+//        labels.put("labelB", "b3");
+//
+//        entity.setLabels(labels);
+//
+//        entityMap.get("ip").put("8.8.8.8", entity);
+//
+//        entity = new Entity();
+//        entity.setName("9.9.9.9");
+//        entity.setType("ip");
+//        labels = new HashMap<>();
+//
+//        labels.put("labelA", "a3");
+//        labels.put("labelB", "b3");
+//
+//        entity.setLabels(labels);
+//
+//        entityMap.get("ip").put("9.9.9.9", entity);
     }
 
     @Override
     public Set<String> getLabelNames() {
         Set<String> labelNames = new HashSet<>();
-        labelNames.add("labelA");
-        labelNames.add("labelB");
-        labelNames.add("labelC");
+        labelNames.add("label1");
+        labelNames.add("label2");
+        labelNames.add("label3");
+        labelNames.add("label4");
         return labelNames;
     }
 
@@ -225,8 +227,8 @@ public class ExampleCmdbServiceImpl implements CmdbService {
         entity.setType("ip");
         Map<String, String> labels = new HashMap<>();
 
-        labels.put("labelA", "a" + ((index % 3) + 1));
-        labels.put("labelB", "b" + ((index++ % 3) + 1));
+        labels.put("label1", "x1" + ((index % 3) + 1));
+        labels.put("label2", "x2" + ((index++ % 3) + 1));
 
         entity.setLabels(labels);
 
