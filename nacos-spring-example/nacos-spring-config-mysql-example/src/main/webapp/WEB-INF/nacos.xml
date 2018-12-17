@@ -9,7 +9,8 @@
 
     <nacos:annotation-driven/>
 
-    <nacos:global-properties endpoint="acm.aliyun.com" namespace="41fc2929-f4f2-4c4f-9bde-8d0d48cab415" access-key="efc53bf102b546158c808e701363ba86" secret-key="z1z0oWlvG4V6cwRKOQ6ptD2Lm5U=" />
+    <!-- 在命名空间详情处可以获取到 endpoint 和 namespace；accessKey 和 secretKey 推荐使用 RAM 账户的 -->
+    <nacos:global-properties endpoint="xxx" namespace="xxx" access-key="xxx" secret-key="xxx" />
 
     <nacos:property-source data-id="datasource.properties"/>
 </beans>
