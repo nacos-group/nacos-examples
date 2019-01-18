@@ -16,10 +16,9 @@ public class ConfigController {
     @Value("${connectTimeoutInMills:5000}")
     private int connectTimeoutInMills;
 
-    public void setConnectTimeoutInMills(int connectTimeoutInMills) {
-        this.connectTimeoutInMills = connectTimeoutInMills;
-    }
-
+    /**
+     * http://localhost:8080/config/get
+     */
     @RequestMapping(value = "/get", method = GET)
     @ResponseBody
     public int get() {

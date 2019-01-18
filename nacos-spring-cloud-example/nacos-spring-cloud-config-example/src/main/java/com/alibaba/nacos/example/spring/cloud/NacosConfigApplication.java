@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @author xiaojing
+ * Document: https://help.aliyun.com/document_detail/94708.html
  */
 @SpringBootApplication
 public class NacosConfigApplication {

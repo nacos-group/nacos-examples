@@ -9,8 +9,21 @@
 
     <nacos:annotation-driven/>
 
-    <!-- 在命名空间详情处可以获取到 endpoint 和 namespace；accessKey 和 secretKey 推荐使用 RAM 账户的 -->
-    <nacos:global-properties endpoint="xxx" namespace="xxx" access-key="xxx" secret-key="xxx" />
+    <!-- 在命名空间详情处可以获取到 endpoint 和 namespace；accessKey 和 secretKey 推荐使用阿里云 RAM 账户的 -->
+    <nacos:global-properties endpoint="xxx" namespace="xxx" access-key="xxx" secret-key="xxx"/>
 
+    <!--
+        ACM 控制台添加配置：
+        Data ID：
+            datasource.properties
+        Group：
+            DEFAULT_GROUP
+        配置内容示例：
+            datasource.url=jdbc:mysql://localhost:3306/test?useSSL=false
+            datasource.username=root
+            datasource.password=root
+            datasource.initial-size=10
+            datasource.max-active=20
+    -->
     <nacos:property-source data-id="datasource.properties"/>
 </beans>
