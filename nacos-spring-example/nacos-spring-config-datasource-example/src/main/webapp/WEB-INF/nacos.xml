@@ -11,5 +11,18 @@
 
     <nacos:global-properties server-addr="127.0.0.1:8848" />
 
+    <!--
+        Nacos 控制台添加配置：
+        Data ID：
+            datasource.properties
+        Group：
+            DEFAULT_GROUP
+        配置内容示例：
+            datasource.url=jdbc:mysql://localhost:3306/test?useSSL=false
+            datasource.username=root
+            datasource.password=root
+            datasource.initial-size=10
+            datasource.max-active=20
+    -->
     <nacos:property-source data-id="datasource.properties"/>
 </beans>

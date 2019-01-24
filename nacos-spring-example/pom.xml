@@ -15,6 +15,9 @@
     <packaging>pom</packaging>
     <modules>
         <module>nacos-spring-config-example</module>
+        <module>nacos-spring-config-pojo-example</module>
+        <module>nacos-spring-config-listener-example</module>
+        <module>nacos-spring-config-multi-data-ids-example</module>
         <module>nacos-spring-config-datasource-example</module>
         <module>nacos-spring-discovery-example</module>
     </modules>

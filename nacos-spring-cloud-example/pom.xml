@@ -12,6 +12,9 @@
     <properties>
         <spring-boot.version>2.0.4.RELEASE</spring-boot.version>
         <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
+
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <modelVersion>4.0.0</modelVersion>
@@ -21,6 +24,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>nacos-spring-cloud-config-example</module>
+        <module>nacos-spring-cloud-config-multi-data-ids-example</module>
         <module>nacos-spring-cloud-discovery-example</module>
     </modules>
 

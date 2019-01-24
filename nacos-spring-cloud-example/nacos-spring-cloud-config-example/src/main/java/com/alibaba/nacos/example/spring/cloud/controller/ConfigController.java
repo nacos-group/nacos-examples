@@ -13,6 +13,9 @@ public class ConfigController {
     @Value("${useLocalCache:false}")
     private boolean useLocalCache;
 
+    /**
+     * http://localhost:8080/config/get
+     */
     @RequestMapping("/get")
     public boolean get() {
         return useLocalCache;
