@@ -28,3 +28,13 @@ hs_err_pid*
 .idea/
 *.iml
 out/
+
+.classpath
+.settings
+target
+.project
+.vscode
+/logs
+*.iml
+*.ipr
+*.iws
