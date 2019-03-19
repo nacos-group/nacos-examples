@@ -1,1 +1,1 @@
-com.alibaba.nacos.example.cmdb.plugin.ExampleCmdbServiceImpl
+com.alibaba.nacos.example.cmdb.plugin.FileCmdbServiceImpl

@@ -14,5 +14,7 @@
         <module>nacos-spring-cloud-example</module>
         <module>nacos-sentinel-example</module>
         <module>nacos-cmdb-plugin-example</module>
+        <module>nacos-provider-example</module>
+        <module>nacos-consumer-example</module>
     </modules>
 </project>
