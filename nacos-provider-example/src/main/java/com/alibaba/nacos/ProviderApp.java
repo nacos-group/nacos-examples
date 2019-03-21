@@ -12,12 +12,13 @@ public class ProviderApp {
 
         NamingService namingService = NamingFactory.createNamingService("127.0.0.1:8848");
 
-        namingService.registerInstance("test.1", "1.1.1.1", 80);
-        namingService.registerInstance("test.1", "2.2.2.2", 80);
-        namingService.registerInstance("test.1", "3.3.3.3", 80);
-        namingService.registerInstance("test.1", "4.4.4.4", 80);
-        namingService.registerInstance("test.1", "5.5.5.5", 80);
-        namingService.registerInstance("test.1", "6.6.6.6", 80);
+        String serviceName = "test.1";
+        namingService.registerInstance(serviceName, "1.1.1.1", 80);
+        namingService.registerInstance(serviceName, "2.2.2.2", 80);
+        namingService.registerInstance(serviceName, "3.3.3.3", 80);
+        namingService.registerInstance(serviceName, "4.4.4.4", 80);
+        namingService.registerInstance(serviceName, "5.5.5.5", 80);
+        namingService.registerInstance(serviceName, "6.6.6.6", 80);
 
         Thread.sleep(1000000000L);
     }
