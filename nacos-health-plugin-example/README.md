@@ -102,7 +102,7 @@ Need to pay attention to the following points:
 * Project packaged into jar
 
 eg.The final jar package is nacos-health-plugin-example-1.0.jar
-
+Note: Dependencies nacos-naming.jar should not be packaged together.
 
 
 ## Step 2
