@@ -9,14 +9,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * <p>
  * ACM 控制台添加配置：
  * <p>
- * Data ID：com.alibaba.nacos.example
+ * Data ID：com.alibaba.nacos.example.properties
  * <p>
  * Group：DEFAULT_GROUP
  * <p>
  * 配置内容：connectTimeoutInMills=5000
  */
 @SpringBootApplication
-@NacosPropertySource(dataId = "com.alibaba.nacos.example", autoRefreshed = true)
+@NacosPropertySource(dataId = "com.alibaba.nacos.example.properties", autoRefreshed = true)
 public class NacosConfigApplication {
 
     public static void main(String[] args) {
