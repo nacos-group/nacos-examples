@@ -15,5 +15,16 @@
         <module>nacos-sentinel-example</module>
         <module>nacos-cmdb-plugin-example</module>
         <module>nacos-health-plugin-example</module>
+        <module>nacos-selector-plugin-exmaple</module>
     </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.alibaba.nacos</groupId>
+                <artifactId>nacos-api</artifactId>
+                <version>2.1.0-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>

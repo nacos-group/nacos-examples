@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ pom.xml
+  ~ Copyright 2021 Qunhe Tech, all rights reserved.
+  ~ Qunhe PROPRIETARY/CONFIDENTIAL, any form of usage is subject to approval.
+  -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>nacos-examples</artifactId>
@@ -9,15 +15,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>nacos-cmdb-plugin-example</artifactId>
+    <artifactId>nacos-selector-plugin-exmaple</artifactId>
 
-    <name>nacos-cmdb-plugin-example</name>
+    <name>nacos-selector-plugin-example</name>
     <url>http://nacos.io</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.7</maven.compiler.source>
-        <maven.compiler.target>1.7</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -25,6 +31,7 @@
             <groupId>com.alibaba.nacos</groupId>
             <artifactId>nacos-api</artifactId>
         </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
