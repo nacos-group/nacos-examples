@@ -12,5 +12,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-com.alibaba.nacos.exmaple.selector.plugin.ExampleCmdbSelector
-com.alibaba.nacos.exmaple.selector.plugin.tag.TagSelector
+com.alibaba.nacos.exmaple.selector.plugin.tag.TagContextBuilder
