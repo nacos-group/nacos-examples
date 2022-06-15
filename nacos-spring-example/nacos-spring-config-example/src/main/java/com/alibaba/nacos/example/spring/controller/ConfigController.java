@@ -32,18 +32,23 @@ public class ConfigController {
     }
 
     /**
-     * curl -X POST 'http://localhost:8080/config?dataId=example&content=useLocalCache=false'
+     * curl -X POST 'http://localhost:8080/config?dataId=example&content=useLocalCache=true'
      */
     @RequestMapping(method = POST)
     @ResponseBody
     public ResponseEntity<String> publish(@RequestParam String dataId,
                                                 @RequestParam(defaultValue = "DEFAULT_GROUP") String group,
-                                                @RequestParam String content) throws NacosException {
-        boolean result = configService.publishConfig(dataId, group, content);
-        if (result) {
-            return new ResponseEntity<String>("Success", HttpStatus.OK);
+                                                @RequestParam String content) {
+        boolean result = false;
+        try {
+            result = configService.publishConfig(dataId, group, content);
+        } catch (NacosException e) {
+            return new ResponseEntity<String>("Publish Fail:" + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
-        return new ResponseEntity<String>("Fail", HttpStatus.INTERNAL_SERVER_ERROR);
+        if (result) {
+            return new ResponseEntity<String>("Publish Success", HttpStatus.OK);
+        }
+        return new ResponseEntity<String>("Publish Fail, Retry", HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }
 
