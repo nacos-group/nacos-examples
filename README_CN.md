@@ -3,12 +3,11 @@ Nacos Examples
 
 # Nacos-examples [中文](./README.md) #
 
-这是Nacos java程序样例，你可以通过nacos原生SDK，Spring模式操作服务和配置
+这是 Nacos java 程序样例，你可以通过 Nacos 原生SDK / Spring 操作服务和配置
 
 ## 启动 Nacos 
 
 你可以本机启动单机模式Nacos
-You can start nacos by standalone on your computer
 
 https://nacos.io/zh-cn/docs/deployment.html
 
@@ -16,7 +15,7 @@ https://nacos.io/zh-cn/docs/deployment.html
 
 https://help.aliyun.com/document_detail/139460.html
 
-https://www.aliyun.com/product/aliware/mse=spm=nacos-examples-java
+https://www.aliyun.com/product/aliware/mse?spm=nacos-examples-java
 
 ## Config your config 
 
