@@ -14,7 +14,7 @@ You can start server from aliyun
 
 https://help.aliyun.com/document_detail/139460.html
 
-https://www.aliyun.com/product/aliware/mse?spm=nacos-examples-java
+https://www.aliyun.com/product/aliware/mse?spm=nacos-github.examples
 
 ## Config your config 
 
