@@ -15,10 +15,11 @@
             <artifactId>nacos-client</artifactId>
             <version>2.1.0</version>
         </dependency>
+        <!--  if you have log impl , not dependent -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.2.3</version>
+            <version>1.2.11</version>
         </dependency>
     </dependencies>
 
