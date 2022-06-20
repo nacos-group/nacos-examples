@@ -13,6 +13,7 @@
         <module>nacos-spring-example</module>
         <module>nacos-spring-boot-example</module>
         <module>nacos-spring-cloud-example</module>
+        <module>nacos-dubbo-example</module>
         <module>nacos-sentinel-example</module>
         <module>nacos-cmdb-plugin-example</module>
         <module>nacos-health-plugin-example</module>
