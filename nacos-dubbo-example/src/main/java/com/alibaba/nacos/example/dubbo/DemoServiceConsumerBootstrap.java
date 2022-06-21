@@ -1,7 +1,7 @@
 package com.alibaba.nacos.example.dubbo;
 
 
-import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
+import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.PropertySource;
@@ -22,7 +22,7 @@ public class DemoServiceConsumerBootstrap {
     @PostConstruct
     public void init() {
         for (int i = 0; i < 10; i++) {
-            System.out.println(demoService.sayName("小马哥（mercyblitz）"));
+            System.out.println(demoService.sayName("Nacos"));
         }
     }
 

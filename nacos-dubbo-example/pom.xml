@@ -35,7 +35,7 @@
         </dependency>
     </dependencies>
     <properties>
-        <dubbo.version>3.0.7</dubbo.version>
+        <dubbo.version>3.0.5</dubbo.version>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
