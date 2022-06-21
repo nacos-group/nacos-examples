@@ -1,4 +1,4 @@
-package com.alibaba.nacos.example.dubbo;
+package com.alibaba.nacos.example.dubbo.service;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.alibaba.dubbo.rpc.RpcContext;
