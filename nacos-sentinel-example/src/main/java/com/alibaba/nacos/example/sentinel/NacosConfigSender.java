@@ -26,17 +26,22 @@ import com.alibaba.nacos.api.config.ConfigService;
 public class NacosConfigSender {
 
     public static void main(String[] args) throws Exception {
+        // Nacos remoteAddress or endpoint
         final String remoteAddress = "localhost";
-//        final String remoteAddress = "47.74.227.13";
         final String groupId = "DEFAULT_GROUP";
         final String dataId = "com.alibaba.nacos.demo.flow.rule";
         final String rule = "[\n"
-            + "  {\n"
-            + "    \"resource\": \"TestResource\",\n"
-            + "    \"count\": 5.0\n"
-            + "  }\n"
-            + "]";
+                + "  {\n"
+                + "    \"resource\": \"TestResource\",\n"
+                + "    \"count\": 5.0\n"
+                + "  }\n"
+                + "]";
         ConfigService configService = NacosFactory.createConfigService(remoteAddress);
-        System.out.println(configService.publishConfig(dataId, groupId, rule));
+        boolean isPublishOk = configService.publishConfig(dataId, groupId, rule);
+        if (isPublishOk) {
+            System.out.println("publish sentinel rull ok");
+        } else {
+            System.out.println("publish sentinel rull fail,please check nacos config or service");
+        }
     }
 }

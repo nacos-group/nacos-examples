@@ -38,7 +38,6 @@ public class NacosDynamicFlowDemo {
 
     public static void main(String[] args) {
     	final String remoteAddress = "localhost";
-//    	final String remoteAddress = "47.74.227.13";
         final String groupId = "DEFAULT_GROUP";
         final String dataId = "com.alibaba.nacos.demo.flow.rule";
         ReadableDataSource<String, List<FlowRule>> flowRuleDataSource = new NacosDataSource<>(remoteAddress, groupId, dataId,
