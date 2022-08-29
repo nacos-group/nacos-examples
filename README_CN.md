@@ -15,7 +15,7 @@ https://nacos.io/zh-cn/docs/deployment.html
 
 https://help.aliyun.com/document_detail/139460.html
 
-https://www.aliyun.com/product/aliware/mse?spm=nacos-examples-java
+https://www.aliyun.com/product/aliware/mse?spm=nacos-website.topbar.0.0.0
 
 ## Config your config 
 
@@ -27,6 +27,9 @@ https://nacos.io/zh-cn/docs/quick-start-spring-boot.html
 
 ### Spring-cloud
 https://nacos.io/zh-cn/docs/quick-start-spring-cloud.html
+
+### Dubbo
+https://nacos.io/zh-cn/docs/use-nacos-with-dubbo.html
 
 ## Run Demo
 Run Main
