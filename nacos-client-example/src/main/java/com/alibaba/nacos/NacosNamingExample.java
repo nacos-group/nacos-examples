@@ -22,7 +22,6 @@ public class NacosNamingExample {
         Properties properties = new Properties();
         // 指定 Nacos 地址
         properties.put(PropertyKeyConst.SERVER_ADDR, "127.0.0.1:8848");
-        properties.put(PropertyKeyConst.SERVER_ADDR, "mse-d54e2240-p.nacos-ans.mse.aliyuncs.com:8848");
 
         // 默认命名空间是空，可以不填写
 //        properties.put(PropertyKeyConst.NAMESPACE, "${namespace}");

@@ -3,6 +3,7 @@ package com.alibaba.nacos;
 import com.alibaba.nacos.api.NacosFactory;
 import com.alibaba.nacos.api.PropertyKeyConst;
 import com.alibaba.nacos.api.config.ConfigService;
+import com.alibaba.nacos.api.config.listener.AbstractListener;
 import com.alibaba.nacos.api.exception.NacosException;
 import com.alibaba.nacos.client.config.listener.impl.PropertiesListener;
 import java.util.Properties;
@@ -43,9 +44,19 @@ public class NacosConfigExample {
         configService.addListener(dataId, group, new PropertiesListener() {
             @Override
             public void innerReceive(Properties properties) {
+                // 由于properties对象结构，默认反序列化
                 LOGGER.info("innerReceive: {}", properties);
             }
         });
+
+        configService.addListener(dataId, group, new AbstractListener() {
+            @Override
+            public void receiveConfigInfo(String s) {
+                // 如果是json/yaml/pojo对象，可以根据需要做反序列化
+                LOGGER.info("innerReceive: {}", s);
+            }
+        });
+
         // 更新配置
         boolean updateConfig = configService.publishConfig(dataId, group, "connectTimeoutInMills=3000");
         LOGGER.info("updateConfig: {}", updateConfig);
