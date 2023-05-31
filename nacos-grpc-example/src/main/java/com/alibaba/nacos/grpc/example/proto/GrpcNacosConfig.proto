@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+import "google/protobuf/descriptor.proto";
+
+package com.alibaba.nacos.grpc.example.proto;
+option java_generic_services = true;
+option java_multiple_files = true;
+option java_package = "com.alibaba.nacos.grpc.example.proto";
+option java_outer_classname = "GrpcNacosProto";
+
+// this config is a must if you want to integrate nacos with grpc
+extend google.protobuf.MessageOptions {
+
+  int32 grpc_nacos_port = 50001;
+  string nacos_uri = 50002;
+
+}
+
+message GrpcNacosOptions {
+
+  option (nacos_uri) = "http://127.0.0.1:8848";
+  option (grpc_nacos_port) = 50051;
+}

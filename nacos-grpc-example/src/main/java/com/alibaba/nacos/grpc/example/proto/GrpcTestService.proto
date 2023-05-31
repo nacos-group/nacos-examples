@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package com.alibaba.nacos.grpc.example.proto;
+option java_generic_services = true;
+option java_multiple_files = true;
+option java_package = "com.alibaba.nacos.grpc.example.proto";
+option java_outer_classname = "GrpcTestServiceProto";
+
+service GrpcTestService {
+  rpc reqString (GrpcTestService_Request_String) returns (GrpcTestService_Response_String) {};
+
+  rpc reqStringClientStream (stream GrpcTestService_Request_String) returns (GrpcTestService_Response_String){};
+
+  rpc reqStringServerStream (GrpcTestService_Request_String) returns(stream GrpcTestService_Response_String){};
+
+  rpc reqStringBothStream (stream GrpcTestService_Request_String) returns(stream GrpcTestService_Response_String){};
+}
+
+message GrpcTestService_Request_String {
+  string name = 1;
+}
+
+message GrpcTestService_Response_String {
+  string result = 1;
+}
