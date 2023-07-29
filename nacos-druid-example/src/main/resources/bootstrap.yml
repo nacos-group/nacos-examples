@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: springboot-nacos
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        prefix: ${spring.application.name}
+        file-extension: yaml
+        group: DEFAULT_GROUP
+        namespace:
+server:
+  port: 8080
