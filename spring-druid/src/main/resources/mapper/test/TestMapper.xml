@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.alibaba.test.mapper.TestMapper">
+
+    <resultMap type="com.alibaba.entity.SysUser" id="UserResult">
+        <id property="userId" column="user_id"/>
+        <id property="userName" column="user_name"/>
+        <id property="nickName" column="nick_name"/>
+    </resultMap>
+
+    <select id="getTestInfo" resultType="SysUser">
+        select * from sys_user where user_id = #{userId}
+    </select>
+
+</mapper>
