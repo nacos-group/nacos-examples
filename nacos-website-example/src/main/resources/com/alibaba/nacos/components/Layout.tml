@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd">
+<head>
+    <meta charset="utf-8"/>
+    <title>${title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <link rel="shortcut icon" href="${asset:context:/favicon.ico}"/>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <t:pagelink page="index" class="navbar-brand">app</t:pagelink>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <t:loop source="pageNames" value="pageName">
+                                <t:any element="li" class="nav-intem">
+                                   <t:pagelink page="prop:pageName" class="prop:classForPageName">${pageName}</t:pagelink>
+                                </t:any>
+                            </t:loop>
+                        </ul>
+                        <span class="navbar-right">
+                            <t:pagelink page="login" class="nav-link btn btn-light">Sign in</t:pagelink>
+                        </span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <t:alerts/>
+        </div>
+    </div>
+    <t:body />
+    <div class="row">
+        <div class="col-12">
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <footer>
+                <p>&copy; Company ${year}</p>
+            </footer>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

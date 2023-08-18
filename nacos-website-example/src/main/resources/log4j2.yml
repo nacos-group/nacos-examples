@@ -1,0 +1,60 @@
+configuration:
+  status: warn
+
+  appenders:
+    console:
+      name: STDOUT
+      patternLayout:
+        Pattern: "%d{DEFAULT} [%-22thread] %-5level %60.60logger %msg%n"
+
+  loggers:
+    root:
+      level: info
+      appenderRef:
+        ref: STDOUT
+
+    logger:
+      # Outputs a list of pages, components and mixins at startup.
+      -
+        name: org.apache.tapestry5.modules.TapestryModule.ComponentClassResolver
+        level: info
+
+      # Outputs startup statistics; elapsed time to setup and initialize the registry, a list of
+      # available services, and a launch banner that includes the Tapestry version number.
+      -
+        name: org.apache.tapestry5.TapestryFilter
+        level: info
+
+      # Turning on debug mode for a page's or component's transformer logger
+      # will show all of the code changes that occur when the
+      # class is loaded.
+      #-
+      #   name: tapestry.transformer.com.alibaba.nacos.pages.Index
+      #   level: debug
+
+      # Turning on debug mode for a component's events logger will show all the events triggered on the
+      # component, and which component methods are invoked as a result.
+      #-
+      #   name: tapestry.events.com.alibaba.nacos.pages.Index
+      #   level: debug
+
+      # Turning on trace mode for a page's render logger provides extended information about every step
+      # in rendering (this is not generally helpful). Turning on debug mode will add a one-line
+      # summary that includes the elapsed render time, which can be useful in tracking down
+      # performance issues.
+      #-
+      #   name: tapestry.render.com.alibaba.nacos.pages.Index
+      #   level: debug
+
+      # Service category names are the name of the defining module class
+      # and then the service id.
+      -
+        name: com.alibaba.nacos.services.AppModule.TimingFilter
+        level: info
+
+      # Turn on some verbose debugging about everything in the application. This is nice initially,
+      # while getting everything set up. You'll probably want to remove this once you are
+      # up and running, replacing it with more selective debugging output.
+      -
+        name: com.alibaba.nacos
+        level: debug

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://xmlns.jcp.org/xml/ns/javaee
+         https://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <display-name>Tapestry 5 Quickstart Project</display-name>
+    <context-param>
+        <!-- The only significant configuration for Tapestry 5, this informs Tapestry of where to look for pages, components and mixins. -->
+        <param-name>tapestry.app-package</param-name>
+        <param-value>com.alibaba.nacos</param-value>
+    </context-param>
+    <!-- Specify some additional Modules for two different execution, modes: development and qa. Remember that the default execution mode is production. -->
+    <context-param>
+        <param-name>tapestry.development-modules</param-name>
+        <param-value>com.alibaba.nacos.DevelopmentModule</param-value>
+    </context-param>
+    <context-param>
+        <param-name>tapestry.qa-modules</param-name>
+        <param-value>com.alibaba.nacos.QaModule</param-value>
+    </context-param>
+    <filter>
+        <filter-name>app</filter-name>
+        <filter-class>org.apache.tapestry5.TapestryFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>app</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>ERROR</dispatcher>
+    </filter-mapping>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error404</location>
+    </error-page>
+</web-app>

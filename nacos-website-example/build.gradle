@@ -1,0 +1,116 @@
+plugins {
+    id 'eclipse'
+    id 'idea'
+    id 'java'
+    id 'org.gretty' version '3.0.6'
+}
+
+ext {
+    versions = [
+        tapestry: "5.8.3",
+        jackson: "2.13.1",
+        log4j: "2.17.2",
+        json: "1.1.4",
+        junit: "5.8.2",
+        yasson: "2.0.4",
+        servlet: "3.1.0"
+    ]
+}
+
+repositories {
+    mavenCentral()
+    maven {
+      url 'https://repository.apache.org/content/repositories/staging/'
+    }
+}
+
+configurations {
+    testUnitTapestryImplementation.extendsFrom testImplementation
+    testUnitTapestryRuntime.extendsFrom testRuntime
+    testIntegrationTapestryImplementation.extendsFrom testImplementation
+    testIntegrationTapestryRuntime.extendsFrom testRuntime
+}
+
+dependencies {
+    // Apache Tapestry
+    implementation("org.apache.tapestry:tapestry-core:${versions.tapestry}")
+
+    // CoffeeScript & Less support, plus resource minification
+    implementation("org.apache.tapestry:tapestry-webresources:${versions.tapestry}")
+
+    // Uncomment this to add support for spring, hibernate, bean validation and uploads
+    //implementation("org.apache.tapestry:tapestry-spring:$versions.tapestry")
+    //implementation("org.apache.tapestry:tapestry-hibernate:$versions.tapestry")
+    //implementation("org.apache.tapestry:tapestry-beanvalidator:$versions.tapestry")
+    //implementation("org.apache.tapestry:tapestry-upload:${tapestry}")
+
+    // Test
+    testImplementation("org.apache.tapestry:tapestry-test:${versions.tapestry}")
+    testImplementation("org.junit.jupiter:junit-jupiter:${versions.junit}")
+
+    // Miscellaneous
+    implementation("org.apache.logging.log4j:log4j-api:${versions.log4j}")
+    implementation("org.apache.logging.log4j:log4j-core:${versions.log4j}")
+
+    runtimeOnly("org.apache.logging.log4j:log4j-slf4j-impl:${versions.log4j}")
+    runtimeOnly("org.eclipse:yasson:${versions.yasson}")
+    runtimeOnly("com.fasterxml.jackson.core:jackson-core:${versions.jackson}")
+    runtimeOnly("com.fasterxml.jackson.core:jackson-databind:${versions.jackson}")
+    runtimeOnly("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:${versions.jackson}")
+
+    runtimeOnly("javax.servlet:javax.servlet-api:${versions.servlet}")
+}
+
+sourceSets {
+    main {
+        java {
+            exclude 'com/alibaba/nacos/spring/*'
+        }
+    }
+    test {
+        java {
+            exclude 'com/alibaba/nacos/tapestry/*'
+        }
+    }
+    testUnitTapestry {
+        java {
+            srcDir "$projectDir/src/test/java"
+            include 'com/alibaba/nacos/tapestry/unit/*/*Test.java'
+        }
+        compileClasspath += main.output + test.output
+        runtimeClasspath += main.output + test.output
+    }
+    testIntegrationTapestry {
+        java {
+            srcDir "$projectDir/src/test/java"
+            include 'com/alibaba/nacos/tapestry/integration/*/*Test.java'
+        }
+        compileClasspath += main.output + test.output
+        runtimeClasspath += main.output + test.output
+    }
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+}
+
+gretty {
+    servletContainer = 'tomcat9'
+    contextPath = '/'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+tasks.register('testUnitTapestry', Test) {
+    useJUnitPlatform()
+    testClassesDirs = sourceSets.testUnitTapestry.output.classesDirs
+    classpath = sourceSets.testUnitTapestry.runtimeClasspath
+}
+
+tasks.register('testIntegrationTapestry', Test) {
+    useTestNG()
+    testClassesDirs = sourceSets.testIntegrationTapestry.output.classesDirs
+    classpath = sourceSets.testIntegrationTapestry.runtimeClasspath
+}
