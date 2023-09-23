@@ -10,12 +10,10 @@ public class LoginTest extends SeleniumTestCase {
         // given
         open("/login");
         assertTrue(getTitle().startsWith("Login"));
-
         // when
         type("//input[@name='email']", "users@tapestry.apache.org");
         type("//input[@name='password']", "Tapestry5");
         submit("//form[@id='login']");
-
         // then
         waitForPageToLoad();
         assertTrue(getTitle().startsWith("Index"));
@@ -26,12 +24,10 @@ public class LoginTest extends SeleniumTestCase {
         // given
         open("/login");
         assertTrue(getTitle().startsWith("Login"));
-
         // when
-        type("//input[@name='email']", "xxx");
-        type("//input[@name='password']", "xxx");
+        type("//input[@name='email']", "xxx1");
+        type("//input[@name='password']", "xxx2");
         submit("//form[@id='login']");
-
         // then
         waitForPageToLoad();
         assertTrue(getTitle().startsWith("Login"));

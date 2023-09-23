@@ -1,19 +1,19 @@
-<html t:type="layout" title="About | nacos-website-example"
-      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
-      xmlns:p="tapestry:parameter">
+    <html t:type="layout" title="About | nacos-website-example"
+          xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+          xmlns:p="tapestry:parameter">
 
-<div class="row">
-    <div class="col-12">
-        <h1>About nacos-website-example application ...</h1>
-    </div>
-</div>
-
-<t:if test="learn">
     <div class="row">
         <div class="col-12">
-            <p>To learn more go to <a href="https://tapestry.apache.org">Tapestry home</a> and start typing...</p>
+            <h1>About nacos-website-example application ...</h1>
         </div>
     </div>
-</t:if>
 
-</html>
+    <t:if test="learn">
+        <div class="row">
+            <div class="col-12">
+                <p>To learn more go to <a href="https://tapestry.apache.org">Tapestry home</a> and start typing...</p>
+            </div>
+        </div>
+    </t:if>
+
+    </html>

@@ -25,7 +25,7 @@ public class AppConfiguration {
         return new ServletContextInitializer() {
             @Override
             public void onStartup(ServletContext servletContext) throws ServletException {
-                servletContext.setInitParameter("tapestry.app-package", "com.alibaba.nacos");
+                servletContext.setInitParameter("tapestry.app-package", "com.alibaba.nacos.sc");
                 servletContext.setInitParameter("tapestry.development-modules", "com.alibaba.nacos.services.DevelopmentModule");
                 servletContext.setInitParameter("tapestry.qa-modules", "com.foo.services.QaModule");
                 //servletContext.setInitParameter("tapestry.use-external-spring-context", "true");
