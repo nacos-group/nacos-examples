@@ -1,22 +1,22 @@
-    <html t:type="layout" title="Login | nacos-website-example"
-          xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
-          xmlns:p="tapestry:parameter">
+<html t:type="layout" title="Login | nacos-website-example"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
 
-    <div class="row justify-content-md-center">
-        <div class="col-12">
-            <t:form t:id="login">
-                <h2>Please sign in</h2>
-                <div class="mb-3">
-                    <t:textfield t:id="email" class="form-control" validate="required" placeholder="Email address"/>
-                </div>
-                <div class="mb-3">
-                    <t:passwordfield t:id="password" class="form-control" validate="required" placeholder="Password"/>
-                </div>
-                <div class="mb-3">
-                    <t:submit class="btn btn-primary btn-large" value="Sign in"/>
-                </div>
-            </t:form>
-        </div>
+<div class="row justify-content-md-center">
+    <div class="col-12">
+        <t:form t:id="login">
+            <h2>Please sign in</h2>
+            <div class="mb-3">
+                <t:textfield t:id="email" class="form-control" validate="required" placeholder="Email Address"/>
+            </div>
+            <div class="mb-3">
+                <t:passwordfield t:id="password" class="form-control" validate="required" placeholder="PassWord"/>
+            </div>
+            <div class="mb-3">
+                <t:submit class="btn btn-primary btn-large" value="Sign In"/>
+            </div>
+        </t:form>
     </div>
+</div>
 
-    </html>
+</html>
