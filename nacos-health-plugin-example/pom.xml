@@ -16,9 +16,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.alibaba.nacos</groupId>
+            <groupId>cn.aghost</groupId>
             <artifactId>nacos-naming</artifactId>
-            <version>1.0.0</version>
+            <version>1.2.1.aghost-fix.20210122</version>
         </dependency>
     </dependencies>
 
